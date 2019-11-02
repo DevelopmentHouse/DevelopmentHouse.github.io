@@ -1,19 +1,55 @@
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <meta name="author" content="Carrucan" />
-  <meta name="keywords" content="development, software, video games" />
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} Moon Base ind. {% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/normalize.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/flickity.min.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <!-- facebook open graph markup. Register your site with https://developers.facebook.com/ to get an app_id  -->
+  <meta property="fb:app_id" content="{{ site.owner.facebook.api }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.excerpt }}" />
+  <meta property="og:image" content="{{ site.url }}/img/{{ page.image.feature }}" />
+  
+  <!-- Twitter Summary Card with Large Image -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@cscawley" />
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+  <meta name="twitter:creator" content="{% if author.twitter %}@{{ author.twitter }}{% endif %}" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description" content="{{ page.excerpt }}" />
+  <meta name="twitter:image" content="{{ site.url }}/img/{{ page.image.feature }}" />
+  
+  <!-- CSS files -->
+  <link rel="stylesheet" href="{{ site.url }}/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ site.url }}/css/custom.css">
+  <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.url }}" />
+
+    <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/{{ site.url }}/{{ site.url }}/ico/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/ico/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/ico/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/ico/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/ico/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/ico/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/ico/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/ico/apple-touch-icon-180x180.png">
+  <link rel="shortcut icon" href="{{ site.url }}/ico/favicon.ico">
+  <link rel="icon" type="image/png" href="{{ site.url }}/ico/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ site.url }}/ico/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="{{ site.url }}/ico/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ site.url }}/ico/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="{{ site.url }}/ico/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{ site.url }}/ico/mstile-144x144.png">
+  <meta name="msapplication-config" content="{{ site.url }}/ico/browserconfig.xml"> 
+    <!-- favicons -->
+
 </head>
