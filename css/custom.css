@@ -34,7 +34,7 @@ body {
 }
 
 .ampelos-leed {
-    font-size: 55px;
+    font-size: 38px;
     text-align: center;
     color: #3c91ad;
     border-bottom: none;
@@ -43,6 +43,7 @@ body {
     -webkit-animation: fadein 2s;
     -o-animation: fadein 2s;
     margin: 0rem 0 0.8rem 0;
+    font-weight: 600;
 }
 
 
