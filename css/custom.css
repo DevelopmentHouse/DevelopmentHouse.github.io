@@ -32,9 +32,9 @@ body {
 }
 
 .ampelos-leed {
-    font-size: 82px;
+    font-size: 62px;
     text-align: center;
-    color: #71695B;
+    color: #3c91ad;
     border-bottom: none;
     animation: fadein 2s;
     -moz-animation: fadein 2s;
